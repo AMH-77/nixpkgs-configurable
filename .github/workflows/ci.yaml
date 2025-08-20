@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "**.nix"
+      - "flake.lock"
+      - ".github/workflows/ci.yaml"
+  pull_request:
+    paths:
+      - "**.nix"
+      - "flake.lock"
+      - ".github/workflows/ci.yaml"
+  workflow_dispatch:
+
+jobs:
+  checks:
+    name: Check test flake
+
+    runs-on: ubuntu-24.04-arm
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+
+      - name: Run flake checks
+        run: |
+          nix flake check ./test \
+            --print-build-logs \
+            --show-trace \
+            --verbose

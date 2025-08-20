@@ -1,0 +1,57 @@
+{
+  "nodes": {
+    "arguments": {
+      "flake": false,
+      "locked": {
+        "path": "./test-arguments.nix",
+        "type": "path"
+      },
+      "original": {
+        "path": "./test-arguments.nix",
+        "type": "path"
+      },
+      "parent": []
+    },
+    "nixpkgs": {
+      "inputs": {
+        "arguments": [
+          "arguments"
+        ],
+        "nixpkgs-src": "nixpkgs-src"
+      },
+      "locked": {
+        "path": "../.",
+        "type": "path"
+      },
+      "original": {
+        "path": "../.",
+        "type": "path"
+      },
+      "parent": []
+    },
+    "nixpkgs-src": {
+      "locked": {
+        "lastModified": 1755388965,
+        "narHash": "sha256-YKdbjp8rb4BH6hq1r7/IcJ12XvB5tsZW76sDb9G/eII=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "09906cab24f49dedbb5b429f8b6c840d4e75b1b7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "arguments": "arguments",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

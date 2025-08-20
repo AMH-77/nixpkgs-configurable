@@ -1,0 +1,4 @@
+# Nix artifacts
+result
+result-*
+repl-result-*
